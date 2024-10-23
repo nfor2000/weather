@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+     * {
+          @apply m-0 p-0 font-poppins box-border;
+     }
+
+     body {
+          background: url('https://media.giphy.com/media/mB4emO0IilFTi/giphy.gif?cid=ecf05e476owwxfwq0xxgww7tiwozxludcx8vkxsbwwvlrgbz&ep=v1_gifs_related&rid=giphy.gif&ct=g') center center/cover;
+          @apply min-h-screen overflow-x-hidden;
+     }
+
+     h1,
+     h2,
+     h3 {
+          @apply font-bold;
+     }
+
+     h1 {
+          @apply text-3xl;
+     }
+
+     h2 {
+          @apply text-2xl;
+     }
+
+     h3 {
+          @apply text-xl;
+     }
+
+
+}
+
+
+@layer utilities {
+     .custom-bg {
+          @apply bg-bg-main-right-side-bar bg-gradient-to-b from-bg-main-radial-top-right-side-bar to-bg-main-radial-bottom-right-side-bar
+     }
+}
+
+@layer components {
+     .table-header {
+          @apply grid grid-cols-7
+     }
+
+     .table-content {
+          @apply grid grid-cols-7
+     }
+}
