@@ -9,7 +9,7 @@ const RainProbStats = () => {
      const today = days[0];
      const { hours } = today;
      const stats = hours
-          .map((hour) => {
+          .map((hour: any) => {
                const time = parse(
                     hour.datetime.split(":", 2).join(":"),
                     "HH:mm",
@@ -24,7 +24,7 @@ const RainProbStats = () => {
                     return stat;
                }
           })
-          .filter((stat) => stat !== undefined)
+          .filter((stat: any) => stat !== undefined)
           .slice(0, 4);
      return (
           <div className="pt-2 grid gap-4">

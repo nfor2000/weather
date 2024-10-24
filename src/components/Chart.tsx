@@ -9,10 +9,10 @@ const BoardChart = () => {
      const nextSevenDays = days.slice(0, 7);
 
      const temperatures = nextSevenDays
-          .map((day) => day?.temp)
+          .map((day: any) => day?.temp)
           .sort((a: number, b: number) => a - b); // Fixed sorting function
 
-     const daysValue = nextSevenDays.map((day) => {
+     const daysValue = nextSevenDays.map((day: any) => {
           const date = new Date(day.datetime);
           return date.getUTCDay();
      });
